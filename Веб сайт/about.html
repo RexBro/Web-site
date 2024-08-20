@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учёба</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .hamburger {
+            cursor: pointer;
+            display: block;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            right: 40px;
+            top: -6px;
+        }
+        .hamburger span {
+            background: #fff;
+            display: block;
+            width: 100%;
+            height: 4px;
+            margin: 4px 0;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            overflow-x: hidden;
+            transition: 0.5s;
+            z-index: 999;
+        }
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .overlay a {
+            padding: 10px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+        .overlay a:hover {
+            color: #f1f1f1;
+        }
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 40px;
+        }
+        .text-container {
+            text-align: center;
+            margin-top: 70px; /* Отступ от верхней границы */
+        }
+        .large-text {
+            font-size: 48px; /* Размер шрифта в два раза больше по сравнению с intro-text */
+            color: #333;
+            margin-bottom: 10px; /* Отступ после большого текста */
+        }
+        .intro-text {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px; /* Отступ до линии */
+        }
+        .line {
+            width: 100%;
+            height: 2px;
+            background-color: #333;
+            margin-bottom: 20px; /* Отступ снизу линии */
+        }
+        .full-width-image {
+            width: 70%;
+            margin: 50px auto 0 auto;
+            display: block;
+        }
+        .text-after-image {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .text-after-image .line {
+            margin-bottom: 30px; /* Отступ снизу линии */
+        }
+        .text-after-image div {
+            margin-bottom: 30px;
+        }
+        .contact-container {
+            background-color: #000;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            border-radius: 10px;
+            margin: 20px 0 0 0; /* Отступ сверху */
+        }
+        .contact-container h2 {
+            font-size: 30px;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        .contact-container a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .contact-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About myself</h1>
+        <div class="hamburger" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="index.html">Main</a>
+            <a href="education.html">Studies</a>
+            <a href="about.html">About myself</a>
+        </div>
+    </div>
+
+    <!-- Тексты над второй фотографией -->
+    <div class="text-container">
+        <div class="large-text">
+            My hobby is not limited to what I said before. I am very interested in anime.
+        </div>
+        <div class="intro-text">
+            I first became interested in anime in 2019, not counting the ones I watched as a child. The first anime I watched to the end was Naruto. It still seems like a cult anime to me in my entire life. It showed me that no matter what others think, you need to work hard and believe in yourself to overcome the path and achieve your goals. Despite other good anime, Naruto remains my favorite.
+        </div>
+        <div class="line"></div> <!-- Узкая линия под текстами -->
+    </div>
+
+    <!-- Вторая фотография -->
+    <img src="https://i.pinimg.com/originals/40/fb/b2/40fbb20ccc03ee1b5ab918cf0006f10e.jpg" alt="Вторая фотография" class="full-width-image">
+
+    <!-- Тексты после второй фотографии -->
+    <div class="text-after-image">
+        <div>
+            I live in Almaty in Aksay district. I like subjects Mathematics, Physical Education and Computer Science. I strive to develop my skills in the field of information security and IT. I also strive to get a job in a large IT company. And together with friends I would like to create a joint project in the field of information security and IT.
+        </div>
+        <div>
+            I also like movies and some TV series. There are many good movies, but the best ones for me are Transformers, Pirates of the Caribbean, many Marvel movies and their TV series, and Disney, DreamWorks, PIXAR and Warner Bros. cartoons. TV series are not far behind, such as Iron Fist, Loki, Sherlock Holmes and Lucifer.
+        </div>
+		
+		<!-- Фотография шириной 70% -->
+    <img src="https://pic.rutubelist.ru/video/dc/3c/dc3c411b9b7441fe394a4eb379d5dae4.jpg" alt="Descriptive alt text" class="full-width-image">
+	
+	<img src="https://avatars.mds.yandex.net/i?id=e148daa55dcde0f5c2c2c664e3bfe18f_l-5239765-images-thumbs&n=13" alt="Descriptive alt text" class="full-width-image">
+
+        <div class="line"></div> <!-- Узкая линия между вторым и третьим текстом -->
+        <div>
+            Computer games have always been a way for me to spend time with friends and a way to relax from various thoughts and worries. They offer a unique way to immerse myself in worlds that are impossible to find in real life. In games, I can become anyone: a hero, a savior, a strategist, or an explorer of unknown territories. They develop my imagination, teach me to think outside the box and solve complex problems. In addition, games help me relax and escape from everyday worries.
+        </div>
+    </div>
+
+    <!-- Контактный блок -->
+    <div class="contact-container">
+        <h2>Контакты</h2>
+        <div>Телефон: +7 775 978 5895</div>
+        <div>
+            Инстаграм: <a href="https://www.instagram.com/batyrbekabylaikhan/#">batyrbekabylaikhan</a>
+        </div>
+        <div>Телеграм: @EUlqkqfzd</div>
+    </div>
+
+    <script>
+        function toggleNav() {
+            const overlay = document.getElementById("myNav");
+            if (overlay.style.width === "100%") {
+                overlay.style.width = "0";
+            } else {
+                overlay.style.width = "100%";
+            }
+        }
+    </script>
+</body>
+</html>
